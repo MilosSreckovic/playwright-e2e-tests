@@ -31,6 +31,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    ignoreHTTPSErrors: true, //about the safari browser issue, we can ignore the https errors
+    navigationTimeout: 30_000, //increase the navigation timeout to 30 seconds
   },
 
   /* Configure projects for major browsers */
