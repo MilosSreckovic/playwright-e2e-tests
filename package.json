@@ -13,7 +13,10 @@
   "main": "index.js",
   "scripts": {
     "demo": "npx playwright test tests/demo/mytest.spec.ts --headed",
-    "login": "npx playwright test tests/functional/login.spec.ts --headed"
+    "login": "npx playwright test tests/functional/login.spec.ts --headed",
+    "make-appt": "npx playwright test tests/functional/make.apptmnt.spec.ts --headed",
+    "ele-int": "npx playwright test tests/demo/element.handle.make.apptmnt.spec.ts --headed",
+    "inv": "npx playwright test tests/functional/inventory.spec.ts --headed"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
