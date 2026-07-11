@@ -33,6 +33,8 @@ export default defineConfig({
     trace: 'on-first-retry',
     ignoreHTTPSErrors: true, //about the safari browser issue, we can ignore the https errors
     navigationTimeout: 30_000, //increase the navigation timeout to 30 seconds
+    screenshot:"only-on-failure",
+    video: "retain-on-failure"
   },
 
   /* Configure projects for major browsers */

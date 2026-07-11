@@ -11,7 +11,7 @@ test("Should load home page with correct title", async ({ page }) => {
   await expect(page.locator("//h1")).toHaveText("CURA Healthcare Service");
 });
 
-test("Should do something", { tag: "@smoke" }, async ({ page }) => {
+test("Should do something", async ({ page }) => {
   //steps...
   await page.locator("//h1").click();
 });

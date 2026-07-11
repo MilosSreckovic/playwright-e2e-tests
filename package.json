@@ -20,7 +20,10 @@
     "debug-test": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --headed",
     "debug-way-ui": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --ui --headed",
     "debug-way-cli": "PWDEBUG=1 npx playwright test tests/functional/debug.make.apptmnt.spec.ts",
-    "debug-way-trace": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --trace on"
+    "debug-way-trace": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --trace on",
+    "pw-basic-cap": "npx playwright test tests\functional/pw.basic.capabilities.ts --headed",
+    "pw-basic-cap:tag": "npx playwright test --grep=\"@smoke\" --headed",
+    "pw-basic-adv": "npx playwright test tests/functional/pw.adv.caabilitites.spec.ts --headed"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
