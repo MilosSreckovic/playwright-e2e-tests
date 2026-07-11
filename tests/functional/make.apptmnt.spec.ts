@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import {log} from "../helpers/logger.js"
 
 test.describe("Should make Appointment", () => {
 
@@ -10,14 +11,16 @@ test.describe("Should make Appointment", () => {
       await expect(page).toHaveTitle("CURA Healthcare Service");
       await expect(page.locator("//h1")).toHaveText("CURA Healthcare Service");
 
+      await log ("log", 'Launching the web app');
+
       //click on make appointment button
       //imena svakog elementa na tastaturi mozemo naci online
       await page.getByRole("link", { name: "Make Appointment" }).click();
       await expect(page.getByText("Please login to make")).toBeVisible();
 
       //successful login with valid credentials
-      await page.getByLabel("Username").fill("John Doe");
-      await page.getByLabel("Password").fill("ThisIsNotAPassword");
+      await page.getByLabel("Username").fill(process.env.TEST_USER_NAME);
+      await page.getByLabel("Password").fill(process.env.PASSWORD);
       await page.getByRole("button", { name: "Login" }).click();
 
       //assert if the text is correct
@@ -46,8 +49,10 @@ test.describe("Should make Appointment", () => {
     //button
     await page.getByRole("button", { name: "Book Appointment" }).click();
 
-    //assertio
+    //assertation
     await expect(page.locator("h2")).toContainText("Appointment Confirmation");
     await expect(page.getByRole("link", { name: "Go to Homepage" }),).toBeVisible();
+
+    await log ("error", 'The page did not launch');
   });
 });
