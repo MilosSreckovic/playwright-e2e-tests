@@ -16,7 +16,11 @@
     "login": "npx playwright test tests/functional/login.spec.ts --headed",
     "make-appt": "npx playwright test tests/functional/make.apptmnt.spec.ts --headed",
     "ele-int": "npx playwright test tests/demo/element.handle.make.apptmnt.spec.ts --headed",
-    "inv": "npx playwright test tests/functional/inventory.spec.ts --headed"
+    "inv": "npx playwright test tests/functional/inventory.spec.ts --headed",
+    "debug-test": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --headed",
+    "debug-way-ui": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --ui --headed",
+    "debug-way-cli": "PWDEBUG=1 npx playwright test tests/functional/debug.make.apptmnt.spec.ts",
+    "debug-way-trace": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --trace on"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
