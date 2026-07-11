@@ -17,13 +17,13 @@
     "make-appt": "npx playwright test tests/functional/make.apptmnt.spec.ts --headed",
     "ele-int": "npx playwright test tests/demo/element.handle.make.apptmnt.spec.ts --headed",
     "inv": "npx playwright test tests/functional/inventory.spec.ts --headed",
-    "debug-test": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --headed",
-    "debug-way-ui": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --ui --headed",
-    "debug-way-cli": "PWDEBUG=1 npx playwright test tests/functional/debug.make.apptmnt.spec.ts",
-    "debug-way-trace": "npx playwright test tests/functional/debug.make.apptmnt.spec.ts --trace on",
-    "pw-basic-cap": "npx playwright test tests\functional/pw.basic.capabilities.ts --headed",
+    "debug-test": "npx playwright test tests/demo/debug.make.apptmnt.spec.ts --headed",
+    "debug-way-ui": "npx playwright test tests/demo/debug.make.apptmnt.spec.ts --ui --headed",
+    "debug-way-cli": "PWDEBUG=1 npx playwright test tests/demo/debug.make.apptmnt.spec.ts",
+    "debug-way-trace": "npx playwright test tests/demo/debug.make.apptmnt.spec.ts --trace on",
+    "pw-basic-cap": "npx playwright test tests/demo/pw.basic.capabilities.ts --headed",
     "pw-basic-cap:tag": "npx playwright test --grep=\"@smoke\" --headed",
-    "pw-basic-adv": "npx playwright test tests/functional/pw.adv.caabilitites.spec.ts --headed"
+    "pw-adv-cap": "npx playwright test tests/demo/pw.adv.capabilities.spec.ts --headed"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
