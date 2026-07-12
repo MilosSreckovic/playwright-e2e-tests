@@ -9,7 +9,7 @@
   ],
   "license": "ISC",
   "author": "Milos Sreckovic",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "demo": "npx playwright test tests/demo/mytest.spec.ts --headed",
@@ -23,12 +23,12 @@
     "debug-way-trace": "npx playwright test tests/demo/debug.make.apptmnt.spec.ts --trace on",
     "pw-basic-cap": "npx playwright test tests/demo/pw.basic.capabilities.ts --headed",
     "pw-basic-cap:tag": "npx playwright test --grep=\"@smoke\" --headed",
-    "pw-adv-cap": "npx playwright test tests/demo/pw.adv.capabilities.spec.ts --headed"
+    "pw-adv-cap": "npx playwright test tests/demo/pw.adv.capabilities.spec.ts --headed",
+    "user-api": "npx playwright test tests/api/user.api.spec.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.1.0",
-    "chakl": "^0.0.1-security",
     "dotenv": "~17.4.2"
   },
   "dependencies": {

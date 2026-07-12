@@ -1,6 +1,5 @@
 /// <reference types="node" />
 import { defineConfig, devices } from '@playwright/test';
-import { argon2 } from 'node:crypto';
 
 /**
  * Read environment variables from file.
